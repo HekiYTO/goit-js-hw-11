@@ -11,6 +11,8 @@ button.addEventListener('click', () => {
     iziToast.error({
       title: 'Error',
       message: 'Please enter a search query',
+      titleColor: "#fff",
+      messageColor: "#fff",
       position: 'topRight'
     });
     return;
@@ -25,7 +27,10 @@ button.addEventListener('click', () => {
       if (images.length === 0) {
         iziToast.error({
           title: 'No results',
-          message: 'Sorry, there are no images matching your search query. Please try again!',
+          message: 'Sorry, there are no images matching your search query. Please, try again!',
+          titleColor: "#fff",
+          messageColor: "#fff",
+          backgroundColor: "#EF4040",
           position: 'topRight'
         });
         return;
@@ -37,6 +42,9 @@ button.addEventListener('click', () => {
       iziToast.error({
         title: 'Error',
         message: 'Failed to fetch images. Please try again.',
+        titleColor: "#fff",
+        messageColor: "#fff",
+        backgroundColor: "#EF4040",
         position: 'topRight'
       });
     });

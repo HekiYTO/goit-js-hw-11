@@ -8,7 +8,7 @@ function createGallery(images) {
 
   const markup = images.map(image => {
     return `
-      <div class="photo-card">
+      <li class="photo-card">
         <a href="${image.largeImageURL}">
           <img class="gal_element" src="${image.webformatURL}" alt="${image.tags}" />
         </a>
@@ -34,7 +34,7 @@ function createGallery(images) {
             <p>${image.downloads}</p>
           </div>
         </div>
-      </div>
+      </li>
     `;
   }).join("");
 

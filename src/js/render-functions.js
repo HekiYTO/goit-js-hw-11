@@ -1,4 +1,3 @@
-import pixbayApi from "./pixabay-api";
 import SimpleLightbox from "simplelightbox";
 
 let gallery = new SimpleLightbox('.gallery a', {});

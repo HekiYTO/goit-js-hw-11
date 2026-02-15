@@ -1,9 +1,9 @@
-import pixbayApi from "./js/pixabay-api";
-import render from "./js/render-functions";
+import { getImagesByQuery } from "./js/pixabay-api.js";
+import render from "./js/render-functions.js";
 import iziToast from 'izitoast';
 
-let button = document.querySelector('button')
-button.addEventListener('click', () => {
+let form = document.querySelector('.form')
+form.addEventListener('submit', (event) => {
   event.preventDefault();
   const query = document.querySelector('input').value.trim();
 
@@ -21,7 +21,7 @@ button.addEventListener('click', () => {
   render.clearGallery();
   render.showLoader();
 
-  pixbayApi.getImagesByQuery(query)
+  getImagesByQuery(query)
     .then(images => {
       render.hideLoader();
       if (images.length === 0) {

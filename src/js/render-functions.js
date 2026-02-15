@@ -1,6 +1,10 @@
 import SimpleLightbox from "simplelightbox";
 
-let gallery = new SimpleLightbox('.gallery a', {});
+let gallery = new SimpleLightbox('.gallery a', {
+  navButtons: true,
+  navText: ['←', '→'],
+  showCounter: true
+});
 
 function createGallery(images) {
   const galleryContainer = document.querySelector(".gallery");
